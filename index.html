@@ -460,43 +460,52 @@
       </div>
     </div>
 
-    <!-- [Gallery] -->
-    <div id="gallery" class="tab-content">
-      <h2>Gallery</h2>
-      <div class="grid-3">
-        
-        <div class="card">
-          <img src="images/연구진사진테크노파크코스모스2016-10-11.jpg" alt="2016-10-11" style="height: 250px;" onerror="this.src='https://via.placeholder.com/300x200?text=2016-10-11'">
-          <h4>테크노파크 코스모스</h4>
-          <p style="font-size: 14px; color: #6c757d; margin-top: 4px;">2016-10-11</p>
-        </div>
-
-        <div class="card">
-          <img src="images/시화호2014-10-31.jpg" alt="2014-10-31" style="height: 250px;" onerror="this.src='https://via.placeholder.com/300x200?text=2014-10-31'">
-          <h4>시화호 현장 조사</h4>
-          <p style="font-size: 14px; color: #6c757d; margin-top: 4px;">2014-10-31</p>
-        </div>
-
-        <div class="card">
-          <div class="slider-container" id="snow-slider">
-            <button class="slider-btn prev" onclick="moveSlide('snow-slider', -1)">&lt;</button>
-            <img src="images/1눈온날20120203.jpg" class="active" alt="눈온날 1" onerror="this.src='https://via.placeholder.com/300x200?text=1눈온날20120203'">
-            <img src="images/2눈온날20120203.jpg" class="active" alt="눈온날 2" onerror="this.src='https://via.placeholder.com/300x200?text=2눈온날20120203'">
-            <img src="images/3눈온날20120203.jpg" class="active" alt="눈온날 3" onerror="this.src='https://via.placeholder.com/300x200?text=3눈온날20120203'">
-            <button class="slider-btn next" onclick="moveSlide('snow-slider', 1)">&gt;</button>
-          </div>
-          <h4>눈 온 날 연구실 기록</h4>
-          <p style="font-size: 14px; color: #6c757d; margin-top: 4px;">2012-02-03</p>
-        </div>
-
-        <div class="card">
-          <img src="images/유장연구진회식2011-05-16.jpg" alt="2011-05-16" style="height: 250px;" onerror="this.src='https://via.placeholder.com/300x200?text=2011-05-16'">
-          <h4>연구진 회식</h4>
-          <p style="font-size: 14px; color: #6c757d; margin-top: 4px;">2011-05-16</p>
-        </div>
-
-      </div>
+<!-- [Gallery] -->
+<div id="gallery" class="tab-content">
+  <h2>Gallery</h2>
+  <!-- 수정 1: grid-3 -> grid-2로 변경하여 한 줄에 2개씩 배치 -->
+  <div class="grid-2">
+    
+    <!-- 카드 1 -->
+    <div class="card">
+      <!-- 수정 2: 카드 너비가 넓어짐에 따라 이미지 높이를 300px로 조절 (object-fit: cover 유지) -->
+      <img src="images/연구진사진테크노파크코스모스2016-10-11.jpg" alt="2016-10-11" style="height: 300px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/600x300?text=2016-10-11'">
+      <h4>테크노파크 코스모스</h4>
+      <p style="font-size: 14px; color: #6c757d; margin-top: 4px;">2016-10-11</p>
     </div>
+
+    <!-- 카드 2 -->
+    <div class="card">
+      <img src="images/시화호2014-10-31.jpg" alt="2014-10-31" style="height: 300px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/600x300?text=2014-10-31'">
+      <h4>시화호 현장 조사</h4>
+      <p style="font-size: 14px; color: #6c757d; margin-top: 4px;">2014-10-31</p>
+    </div>
+
+    <!-- 카드 3: 눈 온 날 연구실 기록 (슬라이더) -->
+    <div class="card">
+      <!-- 슬라이더 컨테이너 높이도 300px로 맞춰 이미지 비율 유지 -->
+      <div class="slider-container" id="snow-slider" style="height: 300px;">
+        <button class="slider-btn prev" onclick="moveSlide('snow-slider', -1)">&lt;</button>
+
+        <img src="images/1눈온날20120203.jpg" class="active" alt="눈온날 1" onerror="this.src='https://via.placeholder.com/600x300?text=1눈온날20120203'">
+        <img src="images/2눈온날20120203.jpg" alt="눈온날 2" onerror="this.src='https://via.placeholder.com/600x300?text=2눈온날20120203'">
+        <img src="images/3눈온날20120203.jpg" alt="눈온날 3" onerror="this.src='https://via.placeholder.com/600x300?text=3눈온날20120203'">
+        
+        <button class="slider-btn next" onclick="moveSlide('snow-slider', 1)">&gt;</button>
+      </div>
+      <h4>눈 온 날 연구실 기록 (3장)</h4>
+      <p style="font-size: 14px; color: #6c757d; margin-top: 4px;">2012-02-03 (좌우 화살표 클릭)</p>
+    </div>
+
+    <!-- 카드 4 -->
+    <div class="card">
+      <img src="images/유장연구진회식2011-05-16.jpg" alt="2011-05-16" style="height: 300px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/600x300?text=2011-05-16'">
+      <h4>연구진 회식</h4>
+      <p style="font-size: 14px; color: #6c757d; margin-top: 4px;">2011-05-16</p>
+    </div>
+
+  </div>
+</div>
 
     <!-- [Contact] -->
     <div id="contact" class="tab-content">
